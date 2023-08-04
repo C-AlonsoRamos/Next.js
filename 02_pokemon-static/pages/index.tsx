@@ -10,6 +10,7 @@ import PokemonCard from '../components/pokemon/PokemonCard';
 
 
 
+
 interface Props {
   pokemons : SmallPokemon[];
 }
@@ -20,6 +21,7 @@ interface Props {
   return (
   
      <Layout title="Listado de Pokemons">
+
         <Grid.Container gap={ 2 } justify="flex-start" >
           {
             pokemons.map((pokemon)=>(
