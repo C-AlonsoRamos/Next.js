@@ -25,7 +25,7 @@ const Layout: FC<Props> = ({title = 'OpenJira', children}) => {
 
       <Box sx={{padding: '10px 20px'}}>
       {children}
-      S</Box>
+      </Box>
 
         
    </Box>
