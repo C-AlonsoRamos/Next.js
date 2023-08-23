@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { Card, CardContent, CardHeader, Grid } from '@mui/material';
+import { Card, CardHeader, Grid } from '@mui/material';
 
 import Layout from '@/components/layouts/Layout';
 import EntryList from '@/components/ui/EntryList';
