@@ -2,10 +2,11 @@ import { createContext } from 'react';
 
 
 interface ContextProps {
-     sidemenuOpen: boolean;
-     openSideMenu: () => void;
-     closeSideMenu: () => void;
-
+     sidemenuOpen: boolean
+     openSideMenu: () => void
+     closeSideMenu: () => void
+     isAddingEntry: boolean
+     setIsAddingEntry: (isAdding: boolean) => void
 }
 
 

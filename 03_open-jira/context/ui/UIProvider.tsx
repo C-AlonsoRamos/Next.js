@@ -2,7 +2,8 @@ import React, { FC, useReducer, ReactNode } from 'react'
 import { UIContext, uiReducer } from './';
 
 export interface UIState {
-    sidemenuOpen: boolean;  
+    sidemenuOpen: boolean 
+    isAddingEntry: boolean 
 }
 
 interface UIProviderProps {
@@ -11,7 +12,8 @@ interface UIProviderProps {
 
 
 const UI_INITIAL_STATE: UIState = {
-      sidemenuOpen: false 
+      sidemenuOpen: false,
+      isAddingEntry: false
 }
 
 
@@ -30,13 +32,18 @@ export const UIProvider:FC <UIProviderProps> = ({children}) => {
     }
 
 
+    const setIsAddingEntry = (isAdding: boolean) => {
+        dispatch({ type: 'UI - Set isAddingEntry', payload: isAdding})
+    }
+
+
     return (
     <UIContext.Provider value={{
        ...state,
 
        openSideMenu, 
-       closeSideMenu 
-
+       closeSideMenu,
+       setIsAddingEntry
     }}>
         {children}
     </UIContext.Provider>

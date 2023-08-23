@@ -10,7 +10,10 @@ interface Props {
 
 const EntryCard: FC<Props> = ({ entry }) => {
   return (
-    <Card sx= {{marginBottom: 1}} >
+    <Card 
+      sx= {{marginBottom: 1}}
+      draggable 
+    >
 
         <CardActionArea>
 
