@@ -1,4 +1,6 @@
 import { db } from "@/database";
+import { seedData } from "@/database/seed-data";
+import { Entry } from "@/models";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
@@ -14,7 +16,8 @@ export default async function handler(
   }
 
   await db.connect();
-
+  await Entry.deleteMany(); // Esto borra toda la base de datos !!!CUIDADO!!!
+  await Entry.insertMany(seedData.entries);
   await db.disconnect();
 
   res.status(200).json({ message: "Proceso realizado con éxito" });

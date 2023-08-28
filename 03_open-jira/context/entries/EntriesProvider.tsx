@@ -13,27 +13,7 @@ interface EntriesProviderProps {
 
 
 const Entries_INITIAL_STATE: EntriesState = {
-      entries: [
-        {
-          _id: uuidv4(),
-          description: 'Pendiente: dfwefwefwefewfgi',
-          status: 'pending',
-          createdAt: Date.now()
-        },
-        {
-          _id: uuidv4(),
-          description: 'En porgreso: lslslslsllsllslsl',
-          status: 'in-progress',
-          createdAt: Date.now() - 1000000  
-        },
-        {
-          _id: uuidv4(),
-          description: 'Terminadas: ndndndndndndnnddn',
-          status: 'finished',
-          createdAt: Date.now() - 1000000000
-        },
-           
-      ] 
+     entries: []
 }
 
 
